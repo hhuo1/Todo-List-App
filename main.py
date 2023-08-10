@@ -8,6 +8,7 @@ root.resizable(False, False)
 
 task_list = []
 
+#Add task
 def addTask():
 	task = task_entry.get()
 	task_entry.delete(0, END)
@@ -18,6 +19,7 @@ def addTask():
 			task_list.append(task)
 			listbox.insert(END, task)
 
+#Delete task
 def deleteTask():
 	global task_list
 	task =str(listbox.get(ANCHOR))
@@ -30,6 +32,7 @@ def deleteTask():
 		listbox.delete(ANCHOR)
 
 
+#Open task file
 def openTaskFIle():
 
 	try:
